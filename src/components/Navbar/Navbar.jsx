@@ -41,7 +41,6 @@ const Navbar = () => {
 
   useEffect(() => {
     if (localStorage.getItem("tokens")) {
-      // checkAuth();
     }
   }, []);
 
@@ -88,12 +87,7 @@ const Navbar = () => {
         ].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
-              <ListItemIcon>
-                {/* {if(index === 0){ 
- 
-                }} 
-                 <HomeIcon onClick={()=>navigate('/')} /> */}
-              </ListItemIcon>
+              <ListItemIcon></ListItemIcon>
               <ListItemText
                 primary={text.title}
                 onClick={() => navigate(`${text.link}`)}
@@ -182,44 +176,6 @@ const Navbar = () => {
       </div>
     </div>
   );
-  // return (
-  // <div>
-  //     <div className="nav-container">
-  //       <div className="item-logo">
-  //         <img onClick={() => navigate("/main")} src={logo} />
-  //       </div>
-  //       <div className="item-menu">
-  //         {pages.map((item) => (
-  //           <h5 onClick={() => navigate(`${item.link}`)} key={item.id}>
-  //             {item.name}
-  //           </h5>
-  //         ))}
-  //       </div>
-  //       <div className="item-search">
-  //         <img src={searchIcon} alt="searchIcon" />
-  //         <input type="text" />
-  //       </div>
-  //       <div className="item-icons">
-  //         <img src={favoriteIcon} alt="favoriteIcon" />
-  //         <img src={shopIcon} alt="favoriteIcon" />
-  //         <img
-  //           onMouseMove={handleMouseOpen}
-  //           onClick={handleMouseClose}
-  //           src={profileIcon}
-  //           alt="favoriteIcon"
-  //         />
-  //       </div>
-  //     </div>
-  //     {openModal && (
-  //       <div className="modal-profile">
-  //         <p>Register</p>
-  //         <p>Login</p>
-  //         <p>Logout</p>
-  //       </div>
-  //     )}
-  //     <img id="burger" src={burgerMenu} alt="burgerMenu" />
-  //   </div>
-  // );
 };
 
 export default Navbar;
